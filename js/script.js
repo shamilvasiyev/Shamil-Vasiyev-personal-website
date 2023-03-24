@@ -1,6 +1,6 @@
 const cursorFollower = document.getElementById("cursorFollower");
 const allTags = document.querySelectorAll("h1,h2,h3,h4,p,a,span");
-const observingBoxes = document.querySelectorAll(".skillsBox");
+const observingBoxes = document.querySelectorAll("#skillsBox");
 const percentages = document.querySelectorAll(".percentage");
 const percentageBars = document.querySelectorAll(".percentage_red_colunm");
 const nav = document.getElementsByTagName("nav");
@@ -80,6 +80,8 @@ window.addEventListener(
   () => {
     const scrollY = Math.round(this.scrollY);
 
+    // observeBox(scrollY);
+
     scrollY > 0
       ? (scrollToTop.style.display = "flex")
       : (scrollToTop.style.display = "none");
@@ -90,6 +92,21 @@ window.addEventListener(
   },
   false
 );
+
+// console.log(observingBoxes);
+
+// const observeBox = (scrValue) => {
+//   const scrollValue = scrValue;
+
+//   observingBoxes.forEach((box) => {
+//     const observingCondition = box.offsetTop - box.offsetHeight === scrollValue;
+
+//     console.log(box.offsetTop - box.offsetHeight);
+//     console.log(scrollValue);
+
+//     if (observingCondition) box.classList.add("skillsBox-active");
+//   });
+// };
 
 // Cursor Pointer
 
@@ -297,11 +314,12 @@ const observer = new IntersectionObserver((entries) => {
         const percentageText = percentage.textContent.trim();
         const value = percentageText.slice(0, 2);
 
-        animateHandler(percentage, 0, value, 1000);
+        animateHandler(percentage, 0, value, 2500);
+        barAnimationHandler(entry.isIntersecting);
       });
-    }
 
-    barAnimationHandler(entry.isIntersecting);
+      observer.unobserve(entry.target);
+    }
   });
 }, observerOptions);
 
