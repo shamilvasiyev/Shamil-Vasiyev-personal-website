@@ -93,21 +93,6 @@ window.addEventListener(
   false
 );
 
-// console.log(observingBoxes);
-
-// const observeBox = (scrValue) => {
-//   const scrollValue = scrValue;
-
-//   observingBoxes.forEach((box) => {
-//     const observingCondition = box.offsetTop - box.offsetHeight === scrollValue;
-
-//     console.log(box.offsetTop - box.offsetHeight);
-//     console.log(scrollValue);
-
-//     if (observingCondition) box.classList.add("skillsBox-active");
-//   });
-// };
-
 // Cursor Pointer
 
 document.addEventListener("mousemove", (e) => {
@@ -367,8 +352,11 @@ nav_links_closeButton.addEventListener("click", () => {
 });
 
 function closeBarOutsideClick(e) {
-  //MUST FIX
-  if (e.target == nav_links) {
+  if (
+    !e.target.classList.contains("bars") &&
+    !e.target.classList.contains("fa-bars") &&
+    e.target !== nav_links
+  ) {
     closeBar();
   }
 }

@@ -677,7 +677,6 @@ a {
 }
 
 #aboutMe_skillsBoxWrapper {
-  /* padding: 20px; */
   border-left: 1px solid rgba(255, 255, 255, 0.07);
   border-right: 1px solid rgba(255, 255, 255, 0.07);
 }
@@ -741,11 +740,12 @@ a {
 .skillBox_desc {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
-
+/* 
 .percentageBox {
   margin-right: 10px;
-}
+} */
 
 .percentage_main_colunm {
   width: 10px;
@@ -782,7 +782,6 @@ a {
 }
 
 #skillsBox h3 {
-  margin-top: 15px;
   font-size: 20px;
   font-weight: bold;
 }
