@@ -127,8 +127,6 @@ const typedText = new Typed("#dinamicTyping", {
   loop: true,
 });
 
-// Portfolio section
-
 //Open modal
 
 projects.forEach((p) => {
@@ -292,7 +290,8 @@ const observerOptions = {
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    entry.target.classList.toggle("skillsBox-active", entry.isIntersecting);
+    console.log(entry);
+    if (entry.isIntersecting) entry.target.classList.add("skillsBox-active");
 
     if (entry.isIntersecting) {
       percentages.forEach((percentage) => {
@@ -311,10 +310,12 @@ const observer = new IntersectionObserver((entries) => {
 const barAnimationHandler = (isIntersecting) => {
   const [first, second, third, last] = percentageBars;
 
-  first.classList.toggle("html_css_colunm-active", isIntersecting);
-  second.classList.toggle("js_react_colunm-active", isIntersecting);
-  third.classList.toggle("js_react_colunm-active", isIntersecting);
-  last.classList.toggle("node_colunm--active", isIntersecting);
+  if (isIntersecting) {
+    first.classList.add("html_css_colunm-active");
+    second.classList.add("js_react_colunm-active");
+    third.classList.add("js_react_colunm-active");
+    last.classList.add("node_colunm--active");
+  }
 };
 
 observingBoxes.forEach((box) => {
