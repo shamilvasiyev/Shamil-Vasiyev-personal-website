@@ -1,1 +1,1 @@
-# Shamil-Vasiyev-personal-website
+https://shamilvasiyev.pages.dev/
