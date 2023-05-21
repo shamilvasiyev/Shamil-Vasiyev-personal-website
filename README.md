@@ -1,0 +1,1 @@
+https://shamilvasiyev.pages.dev/
