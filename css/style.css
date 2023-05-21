@@ -955,7 +955,6 @@ a {
     visibility: visible;
     opacity: 1;
     padding: 50px;
-    /* width: calc(60% - 100px); */
     width: fit-content;
   }
 
