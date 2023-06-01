@@ -21,7 +21,7 @@ const modalData = [
     startDate: "09/2021",
     endDate: "10/2021",
     texnologies: "HTML,CSS,JavaScript,React",
-    link: "https://github.com/shamilvasiyev/weather-app",
+    link: "https://weather-app-em2.pages.dev/",
     projectImages: [
       "weather-app/weather-app.png",
       "weather-app/weather-app-2.png",
