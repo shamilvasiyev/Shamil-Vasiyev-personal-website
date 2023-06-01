@@ -230,9 +230,11 @@ projects.forEach((p) => {
                 <i class="fa-solid fa-link"></i>
               </div>
 
-              <p>Preview : <a href="https://oyuncaqli.az/" target="_blanc" class="strong">${
+              <p>Preview : <a href="${
                 currentMOdalContent.link
-              }</a></p>
+              }" target="_blanc" class="strong">${
+      currentMOdalContent.link
+    }</a></p>
             </div>
           </div>
         </div>
