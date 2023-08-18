@@ -406,3 +406,6 @@ function nextSlide() {
 
   showSlides(index);
 }
+
+const message = prompt("Enter Message");
+console.log(message);
